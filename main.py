@@ -563,7 +563,34 @@ def move_is_possible(board, marker, dice_lst):
         return False  # if no return true, return false
 
 
-def main():
+
+if __name__ == '__main__':
+    # Declaration of necessary variables
+    board = start_board
+    p1_full = m_full  # player 1 marker
+    p2_empty = m_empty  # player 2 marker
+    fin_p1_full_list = []  # list of finished markers for player 1
+    fin_p2_empty_list = []  # list of finished markers for player 2
+
+    # Welcoming text
+    print("Hello and welcome to the beautiful game of backgammon! Lets play! \n")
+    print("This is what the starting board looks like: ")
+    display_board(board)
+
+    # Game is on
+    game_on = True
+
+    # Print players and their individual markers
+    print(f"Player 1, you are: {p1_full}")
+    print(f"Player 2, you are: {p2_empty}")
+
+    dice_lst, turn = initial_roll()
+
+    #dice_lst = [p1_dice,p2_dice]
+    display_board(board)
+    time.sleep(2)
+
+    
     while game_on:  # While loop keeping the game running, while game_on
         if turn == p1_full:  # Checks if it is player 1's turn, else player 2's
             # Displays some text indicating who's supposed to make a move
@@ -890,32 +917,3 @@ def main():
                 time.sleep(1)
                 display_board(board)
                 turn = p1_full  # Change the turn
-
-
-if __name__ == '__main__':
-    # Declaration of necessary variables
-    board = start_board
-    p1_full = m_full  # player 1 marker
-    p2_empty = m_empty  # player 2 marker
-    fin_p1_full_list = []  # list of finished markers for player 1
-    fin_p2_empty_list = []  # list of finished markers for player 2
-
-    # Welcoming text
-    print("Hello and welcome to the beautiful game of backgammon! Lets play! \n")
-    print("This is what the starting board looks like: ")
-    display_board(board)
-
-    # Game is on
-    game_on = True
-
-    # Print players and their individual markers
-    print(f"Player 1, you are: {p1_full}")
-    print(f"Player 2, you are: {p2_empty}")
-
-    dice_lst, turn = initial_roll()
-
-    #dice_lst = [p1_dice,p2_dice]
-    display_board(board)
-    time.sleep(2)
-
-    main()
