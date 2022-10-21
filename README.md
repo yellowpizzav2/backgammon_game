@@ -9,7 +9,7 @@ According to Wikipedia:
 >
 >![This is what the normal board looks like](https://i.imgur.com/koK7yPS.png)
 
-To access the rules of backgammon, <a href='https://www.bkgm.com/rules.html'>click here!</a>
+You can find the rules of backgammon<a href='https://www.bkgm.com/rules.html'> here!</a>
 
 
 This is how we present the board in the console for players to play. The board with the white background is the jupyter representation</br>
